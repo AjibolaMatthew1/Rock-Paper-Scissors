@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+.wrapper {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+
+    .inner {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 372.41px;
+        height: 304.75px;
+        background: #1C1C1C;
+        box-shadow: 0.747065px 5.59552px 9.71185px rgba(0, 0, 0, 0.58);
+        border-radius: 21.563px;
+
+        h1 {
+            font-weight: 500;
+            font-size: 35.7022px;
+            text-align: center;
+            letter-spacing: 0.04em;
+            color: #67EB00;
+            text-transform: uppercase;
+        }
+
+        .leader__table {
+            width: 100%;
+            margin-top: 1em;
+            display: flex;
+            justify-content: space-between;
+
+            h3 {
+                font-family: 'Open Sans', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 11.953px;
+                line-height: 16px;
+                letter-spacing: 0.01em;
+                color: #FFDB0A;
+                text-transform: uppercase;
+            }
+        }
+
+        .leader__display {
+            width: 100%;
+            text-transform: uppercase;
+
+            .leader__details {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 0.5em;
+                border-top: 1.07815px solid rgba(255, 255, 255, 0.33);
+                padding: 9px 0 0 0;
+                position: relative;
+
+                .stars__ctn {
+                    position: absolute;
+                    left: 15%;
+                }
+
+                h3 {
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 11.953px;
+                    line-height: 16px;
+                    letter-spacing: 0.01em;
+                    color: #FFFFFF;
+
+                    &:nth-child(4) {
+                        color: #FFDB0A;
+                    }
+                }
+
+                &:last-child {
+                    border: 5.97652px solid #67EB00;
+                    border-radius: 2.2412px;
+                    padding: 9px;
+                }
+
+            }
+        }
+    }
+}
