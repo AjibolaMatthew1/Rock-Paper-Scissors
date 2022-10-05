@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Links, SelectRound } from "../../components";
 import styles from "../../styles/Select.module.scss";
 
@@ -8,8 +8,33 @@ const Select: NextPage = () => {
   const [changeImage, setChangeImage] = useState<number>(0),
     [changeRound, setChangeRound] = useState<number>(0),
     [currentSection, setCurrentSection] = useState<number>(0);
+
+  useEffect(() => {
+    if (currentSection === 3) {
+      setTimeout(() => {
+        setCurrentSection(4);
+      }, 1000);
+    }
+  }, [currentSection]);
   return (
     <div className={styles.wrapper}>
+      {currentSection === 4 && (
+        <h1
+          style={{
+            color: "white",
+            textAlign: "center",
+            margin: "30px auto -40px",
+            textTransform: "uppercase",
+            fontWeight: "500",
+            fontSize: "31.7778px",
+            lineHeight: "33px",
+            letterSpacing: "0.04em",
+            color: "#FFFFFF",
+          }}
+        >
+          Waiting for opponent...
+        </h1>
+      )}
       <div className={styles.inner}>
         <div className={styles.select__skin__color}>
           <h1>Select skin color</h1>
@@ -105,6 +130,33 @@ const Select: NextPage = () => {
                 Searching for opponent
               </h2>
             </>
+          )}
+          {currentSection === 4 && (
+            <div
+              style={{
+                position: "relative",
+              }}
+            >
+              <Image
+                src="/images/fair-rock-right.png"
+                width={218}
+                height={124}
+                alt="black-skin"
+                objectFit="contain"
+              />
+              <h2
+                style={{
+                  position: "absolute",
+                  left: "0",
+                  right: "0",
+                  textAlign: "center",
+                  marginTop: "15vh",
+                }}
+                className={styles.copy__link}
+              >
+                Ajibola
+              </h2>
+            </div>
           )}
         </div>
       </div>
