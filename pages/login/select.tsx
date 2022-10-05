@@ -29,7 +29,6 @@ const Select: NextPage = () => {
             fontSize: "31.7778px",
             lineHeight: "33px",
             letterSpacing: "0.04em",
-            color: "#FFFFFF",
           }}
         >
           Waiting for opponent...
