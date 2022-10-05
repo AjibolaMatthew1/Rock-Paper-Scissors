@@ -1,0 +1,29 @@
+.wrapper {
+    .btn {
+        height: 40.6px;
+        border: 3.49px solid #FFFFFF;
+        filter: drop-shadow(0px 3.48571px 0px rgba(0, 0, 0, 0.15));
+        border-radius: 60px;
+        font-weight: 500;
+        font-size: 24.0066px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: #FFFFFF;
+        text-shadow: 0px 1.26351px 0px rgba(0, 0, 0, 0.15);
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.5em auto;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        z-index: 3;
+        padding: 1em;
+
+        &:hover {
+            background: #67EB00;
+        }
+    }
+}
