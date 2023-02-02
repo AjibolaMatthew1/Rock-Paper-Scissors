@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Links, SelectRound } from "../../components";
+import { Links, SelectRound } from "../components";
 import styles from "../../styles/Select.module.scss";
 
 const Select: NextPage = () => {
