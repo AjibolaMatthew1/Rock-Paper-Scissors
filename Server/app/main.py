@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middlewares.cors import CORSMiddleware
 
-
 app = FastAPI()
 origins = ["*"]
 
@@ -17,3 +16,8 @@ app.add_midleware(
 async def root():
     return {"Message": "Bingo!"}
     
+@app.get('/{name}')
+async def get_name(name: str):
+    return {"Message": f"Hello {name}"}
+
+# Path: Server\app\main.py

@@ -1,0 +1,126 @@
+.wrapper {
+    width: 542px;
+    height: 485px;
+    background: url('/images/test_cam_image.png') no-repeat center center #1C1C1C;
+    border: 6px solid #67EB00;
+    box-shadow: 0.878652px 6.5811px 16px 2px rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    overflow: hidden;
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        gap: 1em;
+        position: relative;
+        backdrop-filter: blur(10px);
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #1C1C1C;
+            opacity: 0.6;
+            z-index: 2;
+            border-radius: 25px;
+            // blur
+        }
+
+        .content {
+            width: 54%;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            z-index: 3;
+
+            h1 {
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 38px;
+                text-align: center;
+                letter-spacing: 0.04em;
+                color: #FFFFFF;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 27px;
+                text-align: center;
+                color: #FFFFFF;
+            }
+        }
+
+        .test__btn {
+            font-weight: 500;
+            font-size: 23px;
+            line-height: 35px;
+            text-align: center;
+            letter-spacing: 0.04em;
+            color: #FFFFFF;
+            text-shadow: 0px 1.74286px 0px rgba(0, 0, 0, 0.15);
+            border: none;
+            text-transform: uppercase;
+            background: #67EB00;
+            border-radius: 26.1429px;
+            width: 100%;
+            height: 61px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5em auto;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            z-index: 3;
+
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60%;
+                height: 100%;
+                background-color: #4EC407;
+                /* round on one side slant on the other*/
+                clip-path: polygon(0 0, 100% 0, 10% 66%, 0 100%);
+                -webkit-clip-path: polygon(0 0, 70% 66%, 100% 100%, 0 100%);
+                transition: all 0.2s ease-in-out;
+                border-radius: 26.1429px 0 0 26.1429px;
+                z-index: 0;
+                opacity: 0.5;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: all 0.3s ease;
+                background: #4EC407;
+                border: 3.48571px solid #FFFFFF;
+                box-shadow: 0px 3.48571px 0px rgba(0, 0, 0, 0.15);
+                border-radius: 26.1429px;
+                opacity: 0.8;
+            }
+
+            &:hover {
+                background: #4EC407;
+                text-shadow: 0px 1.74286px 0px rgba(0, 0, 0, 0.15);
+                border: 1px solid #000000;
+            }
+        }
+    }
+}

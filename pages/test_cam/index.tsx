@@ -1,9 +1,13 @@
-import styles from "./page.module.scss";
+import { Sidebar, TestCamComponent } from '../../components';
+import styles from './page.module.scss';
 
 const TestCam = () => {
   return (
-    <div></div>
-  )
-}
+    <div className={styles.wrapper}>
+      <Sidebar />
+      <TestCamComponent />
+    </div>
+  );
+};
 
-export default TestCam
+export default TestCam;
