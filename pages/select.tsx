@@ -9,6 +9,8 @@ const Select: NextPage = () => {
     [changeRound, setChangeRound] = useState<number>(0),
     [currentSection, setCurrentSection] = useState<number>(0);
 
+  
+
   useEffect(() => {
     if (currentSection === 3) {
       setTimeout(() => {
